@@ -1,15 +1,16 @@
 /**
 	A simple debounce function taken from here https://www.freecodecamp.org/news/javascript-debounce-example/
-	@param {function} func The function to debounce.
-	@param {number} timeout The time in ms to wait.
-	@returns {function}
+	@param {Function} func The function to debounce.
+	@param {number} [timeout=300] The time in ms to wait.
+	@returns {Function}
 */
 export default function debounce(func, timeout = 300) {
+	/** @type {undefined|NodeJS.Timeout} */
 	let timer;
 	return (...args) => {
 		clearTimeout(timer);
 		timer = setTimeout(() => {
-			func.apply(this, args);
+			func(...args);
 		}, timeout);
 	};
 }
