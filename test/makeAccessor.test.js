@@ -33,7 +33,9 @@ const tests = [
 describe(name, () => {
 	tests.forEach(test => {
 		describe(JSON.stringify(test.args), () => {
-			it(`should equal ${test.expected ? test.expected.toString() : JSON.stringify(test.expected)}`, () => {
+			it(`should equal ${
+				test.expected ? test.expected.toString() : JSON.stringify(test.expected)
+			}`, () => {
 				const actual = fn(...test.args);
 				if (typeof test.expected === 'function') {
 					assert.deepStrictEqual(actual(test.input), test.expected(test.input));

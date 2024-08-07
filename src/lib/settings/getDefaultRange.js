@@ -15,6 +15,6 @@ export default function getDefaultRange(s, width, height, reverse, range, percen
 	return !range
 		? calcBaseRange(s, width, height, reverse, percentRange)
 		: typeof range === 'function'
-			? range({ width, height })
-			: range;
+		? range({ width, height })
+		: range;
 }
