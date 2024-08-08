@@ -3,9 +3,9 @@
 	This uses includes instead of converting to a set because this is only
 	used internally on a small array size and it's not worth the cost
 	of making a set
-	@param {Array<any>} arr1 An array to test
-	@param {Array<any>} arr2 An array to test against
-	@returns {Boolean} Whether they contain all and only the same items
+	@param {Array<unknown>} arr1 An array to test
+	@param {Array<unknown>} arr2 An array to test against
+	@returns {boolean} Whether they contain all and only the same items
  */
 export default function arraysEqual(arr1, arr2) {
 	if (arr1.length !== arr2.length) return false;

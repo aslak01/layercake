@@ -2,7 +2,24 @@ import defaultScales from '../settings/defaultScales.js';
 import padScale from '../utils/padScale.js';
 import getDefaultRange from '../settings/getDefaultRange.js';
 
+/**
+ * @param {string} s
+ */
 export default function createScale(s) {
+	/**
+	 * @param {[
+	 *	string,
+	 *	string,
+	 *	string,
+	 *	Padding,
+	 *	boolean,
+	 *	boolean,
+	 *	number,
+	 *	number,
+	 *	[number, number],
+	 * boolean
+	 * ]} args
+	 */
 	return function scaleCreator([
 		$scale,
 		$extents,

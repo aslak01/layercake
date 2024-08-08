@@ -1,5 +1,6 @@
+import { bin as d3Bin } from 'd3-array';
 /**
-  Bins and counts your data.
+	Bins and counts your data.
 	A wrapper around [d3-array#bin](https://github.com/d3/d3-array#bin)
 
 	// Input data
@@ -34,16 +35,14 @@
 		[ { myX: 8 }, x0: 8, x1: 10 ]
 	]
 
-	@param {Array} data The data to be binned.
-	@param {String|Number|Function} [value] Optional. An accessor function passed to `bin.value()`. Defaults to an identity function. If this is a string or number, it will be transformed into an accessor for that key.
-	@param {Object} options Options object
-	@param {Array} [options.domain] Optional. The domain passed to `bin.domain()`. Pass in your own domain if you'd like, otherwise computed automatically.
-	@param {Number|Array|Function} [options.thresholds] Optional. The thresholds passed to `bin.thresholds()`, otherwise computed automatically.
+	@param {Array<T>} data The data to be binned.
+	@param {string|number|Function} [value] Optional. An accessor function passed to `bin.value()`. Defaults to an identity function. If this is a string or number, it will be transformed into an accessor for that key.
+	@param {object} options Options object
+	@param {Array<[number, number]>} [options.domain] Optional. The domain passed to `bin.domain()`. Pass in your own domain if you'd like, otherwise computed automatically.
+	@param {number|Array<number, number>|Function} [options.thresholds] Optional. The thresholds passed to `bin.thresholds()`, otherwise computed automatically.
 
-	@returns {Array} binData An array of bin arrays
+	@returns {Array<T>} binData An array of bin arrays
 */
-import { bin as d3Bin } from 'd3-array';
-
 export default function bin(data, value, { domain, thresholds } = {}) {
 	if (typeof data !== 'object') {
 		throw new TypeError('The first argument of bin() must be an array or data object');
