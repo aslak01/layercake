@@ -51,7 +51,7 @@
 		return 'middle';
 	}
 
-	$: tickLen = tickMarks === true ? tickMarkLength ?? 6 : 0;
+	$: tickLen = tickMarks === true ? (tickMarkLength ?? 6) : 0;
 
 	$: isBandwidth = typeof $xScale.bandwidth === 'function';
 

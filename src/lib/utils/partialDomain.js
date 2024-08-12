@@ -14,7 +14,7 @@ export default function partialDomain(domain, directive) {
 			}
 			return d;
 		});
-		return newDirective
+		return newDirective;
 	}
 	return domain;
 }

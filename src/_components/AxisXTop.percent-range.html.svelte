@@ -42,7 +42,7 @@
 	/** @type {String} units - Whether this component should use percentage or pixel values. If `percentRange={true}` it defaults to `'%'`. Options: `'%'` or `'px'`. */
 	export let units = $percentRange === true ? '%' : 'px';
 
-	$: tickLen = tickMarks === true ? tickMarkLength ?? 6 : 0;
+	$: tickLen = tickMarks === true ? (tickMarkLength ?? 6) : 0;
 
 	$: isBandwidth = typeof $xScale.bandwidth === 'function';
 
