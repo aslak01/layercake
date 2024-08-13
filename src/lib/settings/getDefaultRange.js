@@ -1,5 +1,5 @@
 /**
- * @param {string} s
+ * @param {"s" | "r" | "y"} s
  * @param {number} width
  * @param {number} height
  * @param {boolean} reverse
@@ -20,7 +20,7 @@ function calcBaseRange(s, width, height, reverse, percentRange) {
 }
 
 /**
- * @param {string} s
+ * @param {"s" | "r" | "y"} s
  * @param {number} width
  * @param {number} height
  * @param {boolean} reverse
